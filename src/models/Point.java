@@ -11,9 +11,24 @@ public class Point {
         this.y=y;
 
     }
-    public void SetPointX(double x){
-        this.x=x;
+
+    public double getX() {
+        return x;
     }
+
+    public double getY() {
+        return y;
+    }
+    @Override public String toString(){
+        return x + " : " + y;
+    }
+    public double getDistance(Point dest){
+        double subX = dest.getX() - this.x;
+        double subY= dest.getY() - this.y;
+        return Math.sqrt(Math.pow(subX,2) + Math.pow(subY,2));
+
+    }
+
 
 
 }
